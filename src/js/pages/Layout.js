@@ -1,6 +1,8 @@
 import React from "react";
 import { NavLink, Link, withRouter } from "react-router-dom";
 
+import Nav from "../components/layout/Nav";
+
 class Layout extends React.Component {
   navigate() {
     console.log(this.props.history);
@@ -11,6 +13,7 @@ class Layout extends React.Component {
   render () {
     return (
       <div>
+        <Nav location={location} />
         <h1>KillerNews.net</h1>
         {this.props.children}
         <Link to="/archives/some-other-articles?date=yesterday&fileter=none" class="btn btn-warning">archives (article name shows up)</Link>
